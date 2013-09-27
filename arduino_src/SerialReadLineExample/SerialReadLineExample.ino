@@ -16,7 +16,7 @@ void setup() {
 void loop() {
   // print the string when a newline arrives:
   if (bStrComplete) {
-    Serial.print(strInputLine);
+    Serial.print("Arduino Recieved: " + strInputLine);
     // clear the string:
     strInputLine = "";
     bStrComplete = false;
