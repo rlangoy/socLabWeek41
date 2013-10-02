@@ -16,14 +16,15 @@ void loop() {
   float oldVoltage=-1;
   while(true)
   { // read the input on analog pin 0:
-    int sensorValue = analogRead(A1);
-    // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
-    float voltage = sensorValue * (5.0 / 1023.0);
-    if(voltage!=oldVoltage) //Transfer voltage on change
-    {  
-      //Transfer the serial data
+     int sensorValue = analogRead(A1);
+     // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+     float voltage =  sensorValue * (5.0 / 1023.0);
+     //Use a hysteresis of 0.1V to avoid trasmission of noice
+     if ((voltage > (oldVoltage+.01)) | (voltage < (oldVoltage-.01)))
+     {//Transfer the serial data
       Serial.print("$VOLTAGE,A1," );
       Serial.println(voltage);
+      oldVoltage=voltage;
     }//end if
   }//end while
 }
