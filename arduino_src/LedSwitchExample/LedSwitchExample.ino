@@ -28,7 +28,7 @@ void setup() {
   pinMode(sw2,  INPUT_PULLUP);
   pinMode(sw3,  INPUT_PULLUP);
 
-  // make the switches input width pulup  
+  // make the Leds output width pulup  
   pinMode(led0,  OUTPUT );
   pinMode(led1,  OUTPUT );
   pinMode(led2,  OUTPUT );
