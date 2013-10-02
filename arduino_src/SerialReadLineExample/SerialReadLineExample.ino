@@ -16,7 +16,7 @@ void setup() {
   strInputLine.reserve(MAX_RECV_LINE_LENGTH);  
 }
 
-//  strCommands - input string that contains a CVS string ($LED,1,0,1,0,2)
+//  strCommands - input string that contains a CVS string ($LED,1,0,1,0,1)
 //  strTab - has the splited input (strTab[0]="$LED",strTab[1]="1",strTab[2]="0")
 //  maxItems -  the maximum commands to parse
 //  Return the number of read items
