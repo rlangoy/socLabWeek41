@@ -12,3 +12,11 @@ arduino_src/SerialSendSwitchStatus/SerialSendSwitchStatus.ino
 python_src/SerialRecieveSwitchStatus.py
 
 
+--  The Python program sends a message to the aduino board
+--  The message is show on the LCD display
+python_src/SerialSendLCDMessage.py
+arduino_src/SerialShowLCD/SerialShowLCD.ino
+
+
+
+
