@@ -35,7 +35,7 @@ int SplitCommands(String  strCommands, String strTab[],int maxItems)
         }
         else
             //Prints the last element
-            strTab[iItems]= strCommands.substring(fisrtCommaPosition,strInputLine.length());
+            strTab[iItems]= strCommands.substring(fisrtCommaPosition,strInputLine.length()-1);
       
        iItems++; 
 
