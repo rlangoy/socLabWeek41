@@ -53,7 +53,7 @@ int SplitCommands(String strCommands, String strTab[],int maxItems)
         }
         else
             //Prints the last element
-            strTab[iItems]= strCommands.substring(fisrtCommaPosition,strInputLine.length());
+            strTab[iItems]= strCommands.substring(fisrtCommaPosition,strInputLine.length()-1);
       
        iItems++;
 
@@ -72,6 +72,7 @@ void loop()
     int nCommands=SplitCommands(strInputLine,strCommands,MAX_COMMANDS); // Parses the CVS string
     if(strCommands[0]=="$LCD")
     {
+      lcd.clear();                  // Clear screen
       lcd.setCursor(0,0);           // Set cursor to column 0, row 0 (the first row)
       lcd.print(strCommands[1]);    // Display text at line 0
       lcd.setCursor(0,1);           // set cursor to column 0, row 1
