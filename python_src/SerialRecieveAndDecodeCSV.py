@@ -3,11 +3,11 @@
 import serial #Serial port API http://pyserial.sourceforge.net/pyserial_api.html
 port = "/dev/ttyACM0"
 
-SerialIOArduino = serial.Serial(port,9600) #setup the serial port and baudrate
-SerialIOArduino.flushInput() #Remove old input's
+SerialIOmbed = serial.Serial(port,9600) #setup the serial port and baudrate
+SerialIOmbed.flushInput() #Remove old input's
 
 while True:
-    if (SerialIOArduino.inWaiting() > 0):
-        inputLine = SerialIOArduino.readline().strip()  # read a '\n' terminated line()
+    if (SerialIOmbed.inWaiting() > 0):
+        inputLine = SerialIOmbed.readline().strip()  # read a '\n' terminated line()
         comands=inputLine.split(",") # Splits the line into a table/list like : ['$SW', '1', '1', '0', '0']
         print(comands)
