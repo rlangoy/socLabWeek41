@@ -8,8 +8,8 @@ port = "/dev/ttyACM0"
 SerialIOmbed = serial.Serial(port,9600) #setup the serial port and baudrate
 SerialIOmbed.flushInput()                #Remove old input's
 
-time.sleep(2)   #Wait 2 sek for the Arduino to reboot before prceeding
-
+time.sleep(2)   #Wait 2 sek 
+SerialIOmbed.write("\n")
 SerialIOmbed.write("$LCD,Hello Line 1,Hello Line 2\n")
 
 SerialIOmbed.close()
