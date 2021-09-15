@@ -1,5 +1,5 @@
 #Install the serial library first
-# sudo apt-get install python-serial
+# pip3 pyserial
 import serial #Serial port API http://pyserial.sourceforge.net/pyserial_api.html
 port = "/dev/ttyACM0"
 
